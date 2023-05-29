@@ -9,12 +9,26 @@
   font-style: normal;
 }
 
+html {
+  cursor: crosshair;
+  animation: fadein 3.5s;
+  -webkit-animation: fadein 3.5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
 html,
 body {
   cursor: crosshair;
   height: 100%;
   overflow: hidden;
-  background-color: black;
 }
 
 ::selection {
@@ -28,6 +42,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   word-break: keep-all;
+  background-color: black;
 }
 
 a {
@@ -49,7 +64,7 @@ nav {
 nav a {
   flex: 1 1 0;
   padding: 1rem;
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 900;
   line-height: 1;
   text-align: center;
@@ -112,4 +127,61 @@ iframe {
   overflow-x: hidden;
   overflow-y: auto;
   border: 0;
+}
+
+/*min-width 393px iphone pro*/
+img, video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -61%);
+  z-index: -1;
+}
+/*iphone pro max*/
+@media screen and (min-width: 430px) {
+  img, video {
+  transform: translate(-50%, -60%);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  img, video {
+  transform: translate(-50%, -52%);
+  }
+}
+/*ipad pro 11in*/
+@media screen and (min-width: 834px) {
+  img, video {
+  transform: translate(-50%, -52%);
+  }
+}
+/*ipad pro 12in*/
+@media screen and (min-width: 1024px) {
+  img, video {
+  transform: translate(-50%, -52%);
+  }
+}
+/*macbook pro 13in*/
+@media screen and (min-width: 1280px) {
+  img, video {
+  transform: translate(-50%, -51.5%);
+  }
+}
+/*macbook pro 14,15in*/
+@media screen and (min-width: 1440px) {
+  img, video {
+  transform: translate(-50%, -51%);
+  }
+}
+/*macbook pro 15~in*/
+@media screen and (min-width: 1680px) {
+  img, video {
+  transform: translate(-50%, -50.5%);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  img, video {
+  transform: translate(-50%, -50%);
+  }
 }
